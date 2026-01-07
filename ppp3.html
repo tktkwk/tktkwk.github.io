@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポピぱ3</title>
+  <style>
+    body {
+      font-family: '游ゴシック', 'Yu Gothic', sans-serif;
+      background-color: #d6c6af;
+      color: #5c3a00;
+      margin: 0;
+    }
+
+    .vertical-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    /* 💻 パソコン用（通常） */
+    .vertical-images img {
+      width: 80vw; /* 画面幅の80%で可変に */
+      max-width: 500px; /* 最大500pxまで */
+      height: auto;
+      display: block;
+    }
+
+    /* 📱 スマホ用（幅768px以下） */
+    @media (max-width: 768px) {
+      .vertical-images img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+      }
+    }
+
+    .back-link {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .back-link a {
+      color: #5c3a00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="vertical-images">
+    <img src="ppp3/ppp3-1.png" alt="画像1">
+    <img src="ppp3/ppp3-2.png" alt="画像2">
+    <img src="ppp3/ppp3-3.png" alt="画像3">
+    <img src="ppp3/ppp3-4.png" alt="画像4">
+    <img src="ppp3/ppp3-5.png" alt="画像5">
+    <img src="ppp3/ppp3-6.png" alt="画像6">
+    <img src="ppp3/ppp3-7.png" alt="画像7">
+    <img src="ppp3/ppp3-8.png" alt="画像8">
+    <img src="ppp3/ppp3-9.png" alt="画像9">
+    <img src="ppp3/ppp3-10.png" alt="画像10">
+    <img src="ppp3/ppp3-11.png" alt="画像11">
+    <img src="ppp3/ppp3-12.png" alt="画像12">
+    <img src="ppp3/ppp3-13.png" alt="画像13">
+    <img src="ppp3/ppp3-14_2.png" alt="画像14">
+  </div>
+
+  <p class="back-link">
+    <a href="index.html">← メインページに戻る</a>
+  </p>
+</body>
+</html>
