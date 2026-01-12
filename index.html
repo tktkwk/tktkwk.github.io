@@ -265,7 +265,65 @@
       color:#8a6f56;
       font-size:12px;
     }
+/* ===== 作品一覧だけ表示 ===== */
 
+/* 消したいもの */
+.topbar,
+.header,
+.profile,
+footer {
+  display: none;
+}
+
+/* レイアウトを1カラムに */
+.main {
+  display: block;
+}
+
+/* 背景を白に */
+body {
+  background: #fff;
+  padding: 20px 10px;
+}
+
+/* 作品一覧を画面いっぱいに */
+.wrap {
+  max-width: none;
+  width: 100%;
+}
+
+.content {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* 作品グリッド */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* サムネは正方形だけ */
+.thumb {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.thumb img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* タイトル・日付を消す */
+.meta {
+  display: none;
+}
 
   </style>
 </head>
