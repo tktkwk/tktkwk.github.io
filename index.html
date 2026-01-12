@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SugarPiP — index</title>
+  <title>szkmsg — index</title>
 
   <style>
     :root{
@@ -268,38 +268,45 @@
 
 @media (max-width: 600px) {
 
+  header,
+  .header,
+  #header {
+    display:none !important;
+  }
+
+  body{
+    margin:0;
+    padding:0;
+  }
+
+  .wrap{
+    width:100vw;
+    max-width:none;
+    margin:0;
+    padding:0;
+  }
+
   .main{
     display:grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap:12px;
+    width:100%;
+    padding:0;
   }
 
-  .main > * {
+  #works{
+    width:100%;
+    margin:0;
+    padding:0;
+  }
+
+  .main > *{
     display:none;
   }
 
-  #works {
+  #works{
     display:block !important;
   }
-
-  body{
-    padding-left:0;
-    padding-right:0;
-    justify-content:flex-start;
-  }
-
-  .wrap{
-    max-width:100%;
-    width:100%;
-    margin:0;
-  }
-
-  .hero img{
-    object-fit:contain;
-  }
-
-  .tags{gap:8px;}
-  .tag{flex:1 1 auto;min-width:0;}
 }
 
   </style>
@@ -335,9 +342,9 @@
 
       <aside class="profile" id="about">
         <div class="head">
-          <div class="avatar"><img src="top/wako.png" alt="徳時わこのアバター"></div>
+          <div class="avatar"><img src="top/masago_2.PNG" alt="アバター"></div>
           <div>
-            <div class="name">徳時わこ🪅</div>
+            <div class="name">鈴鹿真砂🪅</div>
             <div class="small-note">イラスト・漫画などを投稿しています！</div>
           </div>
         </div>
@@ -447,7 +454,7 @@
       </section>
     </main>
 
-    <footer>© 2025 徳時わこ — SugarPiP</footer>
+    <footer>© 2025 鈴鹿真砂 — ブログを目指した何か</footer>
   </div>
 </body>
 </html>
