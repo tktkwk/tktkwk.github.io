@@ -266,6 +266,50 @@
       font-size:12px;
     }
 
+@media (max-width: 600px) {
+
+  /* 上の固定メニューを消す */
+  .topbar{
+    display:none !important;
+  }
+
+  /* bodyの余白を消す */
+  body{
+    padding:0;
+  }
+
+  /* wrapの最大幅を解除 */
+  .wrap{
+    max-width:none;
+    width:100%;
+  }
+
+  /* worksのカード背景の余白を消す */
+  .content{
+    padding:0;
+    border-radius:0;
+  }
+
+  /* ★ここが本命：アイコンを2列にする */
+  .gallery{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:12px;
+    padding:12px; /* 端に少し余白ほしければ */
+  }
+
+  /* 各アイコンを幅いっぱいに */
+  .thumb{
+    width:100%;
+    margin:0;
+  }
+
+  .thumb img{
+    width:100%;
+    height:auto;
+    display:block;
+  }
+}
 
 
   </style>
