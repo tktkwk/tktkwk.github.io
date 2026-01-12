@@ -266,65 +266,6 @@
       font-size:12px;
     }
 
-@media (max-width: 600px) {
-
-  /* いらないもの全部消す */
-  .topbar,
-  header,
-  .profile,
-  footer,
-  .featured-container,
-  .content h2 {
-    display:none;
-  }
-
-  /* 全体を白背景に */
-  body{
-    margin:0;
-    padding:0;
-    background:#fff;
-  }
-
-  .wrap{
-    max-width:none;
-    width:100%;
-  }
-
-  .content{
-    padding:0;
-    background:transparent;
-    box-shadow:none;
-  }
-
-  /* 作品一覧だけ2列表示 */
-  .gallery{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:8px;
-    padding:8px;
-  }
-
-  /* アイコン */
-  .thumb{
-    padding:0;
-    border:none;
-    box-shadow:none;
-    background:none;
-  }
-
-  .thumb img{
-    width:100%;
-    aspect-ratio:1 / 1;
-    object-fit:cover;
-    display:block;
-  }
-
-  /* 概要は消す */
-  .meta{
-    display:none;
-  }
-}
-
 
   </style>
 </head>
