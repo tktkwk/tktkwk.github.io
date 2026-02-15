@@ -256,38 +256,35 @@ footer{
 @media (max-width:600px){
 
   body{
-    padding:70px 8px 40px;
+    padding:20px 8px 40px;
     font-size:15px;
   }
 
-  /* 3カラム → 1カラム固定 */
   .main{
     grid-template-columns:1fr;
   }
 
-  /* プロフィールと右サイド非表示 */
   .profile,
   .sidebar{
     display:none;
   }
 
-  /* ギャラリーを常に2列 */
   .gallery{
     grid-template-columns:repeat(2,1fr);
     gap:10px;
   }
 
-  /* サムネ余白少し減らす */
   .thumb{
     padding:6px;
   }
 
-  /* トップバー少し小さく */
+  .header,
   .topbar{
-    height:60px;
+    display:none;
   }
 
 }
+
 
 </style>
 </head>
