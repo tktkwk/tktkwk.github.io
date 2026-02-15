@@ -4,6 +4,399 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>tktkwk — index</title>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>tktkwk — index</title>
+
+<style>
+:root{
+  --bg:#e9dccb;
+  --panel:#fff9f2;
+  --accent:#b0895a;
+  --muted:#cdb89d;
+  --shadow:0 6px 18px rgba(0,0,0,0.08);
+  --radius:12px;
+  --max-width:1200px;
+  --text:#5c3a00;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:"Yu Gothic UI","游ゴシック体","Hiragino Kaku Gothic ProN",sans-serif;
+  background:linear-gradient(180deg,var(--bg),#e7d7c4 60%);
+  color:var(--text);
+  padding:90px 10px 60px;
+  display:flex;
+  justify-content:center;
+  font-size:14px;
+}
+
+/* ===== 上部固定メニュー ===== */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:80px;
+  background:rgba(255,249,242,0.9);
+  backdrop-filter: blur(6px);
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.topbar-nav{
+  display:flex;
+  gap:18px;
+}
+
+.topbar-nav a{
+  text-decoration:none;
+  font-weight:700;
+  font-size:16px;
+  color:var(--text);
+  padding:8px 16px;
+  border-radius:999px;
+}
+
+.topbar-nav a:hover{
+  background:#f0e6db;
+}
+
+.wrap{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* ヘッダー */
+.header{
+  background:var(--panel);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  margin-bottom:16px;
+}
+
+.hero{
+  height:clamp(180px,30vw,320px);
+}
+
+.hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+nav.topnav{
+  display:flex;
+  gap:12px;
+  padding:14px 16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+nav.topnav a{
+  background:var(--muted);
+  color:#fff;
+  padding:8px 14px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:13px;
+}
+
+/* ===== 3カラム ===== */
+.main{
+  display:grid;
+  grid-template-columns:260px 1fr 260px;
+  gap:16px;
+}
+
+/* 共通ボックス */
+.profile,
+.content,
+.sidebar .side-box{
+  background:var(--panel);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+/* ===== 左プロフィール ===== */
+.profile{
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.head{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.avatar{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.name{font-size:20px;font-weight:800;}
+.small-note{font-size:16px;}
+.bio{font-size:14px;line-height:1.5;}
+
+.tags{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.tag{
+  background:#fff5ea;
+  border:1px solid #f0e6db;
+  padding:6px 8px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+/* ===== 中央 ===== */
+.content{
+  padding:18px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
+}
+
+.thumb{
+  background:#fff;
+  border-radius:10px;
+  padding:10px;
+  border:1px solid #f2ebe0;
+  text-decoration:none;
+  color:var(--text);
+  transition:.2s;
+}
+
+.thumb:hover{
+  transform:translateY(-4px);
+}
+
+.thumb img{
+  width:100%;
+  border-radius:6px;
+}
+
+.meta{
+  font-size:13px;
+}
+
+/* ===== 右サイド ===== */
+.sidebar{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.side-box{
+  padding:10px 16px 14px;   /* ← 上の余白を減らした */
+}
+
+.side-box h3{
+  font-size:14px;
+  margin:0 0 6px 0;         /* ← 下の余白を減らした */
+  background:var(--muted);
+  color:#fff;
+  padding:6px 12px;
+  border-radius:999px;
+  display:inline-block;
+}
+
+.side-box ul{
+  padding-left:16px;
+  margin:0;
+  font-size:13px;
+}
+
+.side-box li{
+  margin-bottom:4px;        /* ← 行間を少し詰めた */
+}
+
+.side-box p{
+  font-size:13px;
+  margin:0;
+}
+
+
+/* ===== レスポンシブ ===== */
+@media (max-width:900px){
+  .main{
+    grid-template-columns:1fr;
+  }
+}
+
+footer{
+  margin-top:20px;
+  text-align:center;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<nav class="topbar-nav">
+<a href="chara1.html">キャラクター1(まだ)</a>
+<a href="chara2.html">キャラクター2(まだ)</a>
+<a href="chara3.html">キャラクター3(まだ)</a>
+</nav>
+</div>
+
+<div class="wrap">
+
+<header class="header">
+<div class="hero">
+<img src="top/header_6.png" alt="サイトヘッダーイラスト">
+</div>
+<nav class="topnav">
+<a href="#works">作品一覧</a>
+<a href="#about">プロフィール</a>
+<a href="#contact">お問い合わせ</a>
+</nav>
+</header>
+
+<main class="main">
+
+<!-- 左 -->
+<aside class="profile" id="about">
+<div class="head">
+<div class="avatar"><img src="top/wako_3.PNG" alt="アバター"></div>
+<div>
+<div class="name">徳時わこ🪅</div>
+<div class="small-note">馬ァ！</div>
+</div>
+</div>
+
+<p class="bio">
+趣味：バスケ/水泳/ボルダリング<br>
+好き：犬/ラーメン/Vtuber<br>
+苦手：プリン
+</p>
+
+<div class="tags">
+    <div class="tag">🧩今日の日記:ドラえもんの映画ではひみつ道具博物館が好き。あとドラえもんズ。(2025/08/08)</div>
+    <div class="tag">🧩今日の日記:Vtuberは委員長と社長が好きでよく見ています。元気が出るね。(2025/08/11)</div>
+    <div class="tag">🧩今日の日記:好きなポケモンはオーベム。一緒に暮らしたいと思う今日この頃。(2025/09/28)</div>
+    <div class="tag">🧩今日の日記:自分の守護霊に会う夢を見た。「あんた1年後に○にたくなるみたいだけど69まで生きるよ」って言われた。早いな。(2025/10/01)</div>
+    <div class="tag">🧩今日の日記:ファッションセンスが皆無なので書くときは毎回調べてる。買うときはマネキン買い。ありがたいね。(2025/10/02)</div>
+    <div class="tag">🧩今日の日記:好きなゲームはマリオとスプラトゥーン。マリオはグルメヘイホーが大好き。ハッピーハロウィン！(2025/10/31)</div>
+    <div class="tag">🧩今日の日記:作業用の再生リスト作った。楽しい。(2025/11/25)</div>
+    <div class="tag">🧩今日の日記:委員長と社長に敬語で怒られたい。(2025/12/14)</div>
+    <div class="tag">🧩今日の日記:マックへ行ったら社長の声が聞こえてとても動揺した。予定と違う注文をしたけど幸せです。(2025/12/21)</div>
+    <div class="tag">🧩今日の日記:クレヨンしんちゃんの映画のロボとーちゃんを観てはボロ泣きしてる。メリークリスマス！(2025/12/25)</div>
+    <div class="tag">🧩今日の日記:ポピぱとえぶホスが好きな1年でした。よいお年を！(2025/12/29)</div>
+    <div class="tag">🧩今日の日記:中学時代の修学旅行の夢を見た。水分補給と私語禁止だったのであまりいい思い出ではないね。(2025/12/31)</div>
+    <div class="tag">🧩今日の日記:本日2月6日は自分の誕生日です。めでたいね。今年は好きと推しの違いがわかる1年にしたい。ハッピーバースデー！(2026/02/06)</div>
+    <div class="tag">🧩今日の日記:友とディズニーに行ってきました。久しぶりのシーだったのですが色々とシステムが変わっていて戸惑いましたね。好きな乗り物はシンドバッドです。(2026/02/09)</div>
+</div>
+</aside>
+
+<!-- 中央 -->
+<section class="content" id="works">
+<div class="gallery">
+
+<a href="ppp1.html" class="thumb">
+    <img src="ppp1/ppp1-1.png" alt="ポピぱ1">
+    <div class="meta"><span>ポピぱ1</span><small>2013/10</small></div>
+  </a>
+
+  <a href="ppp2.html" class="thumb">
+    <img src="ppp2/ppp2-1.png" alt="ポピぱ2">
+    <div class="meta"><span>ポピぱ2</span><small>2021/09</small></div>
+  </a>
+
+  <a href="ppp3.html" class="thumb">
+    <img src="ppp3/ppp3-1.png" alt="ポピぱ3">
+    <div class="meta"><span>ポピぱ3</span><small>2025/08</small></div>
+  </a>
+
+  <a href="manga1.html" class="thumb">
+    <img src="manga1/manga1-1.png" alt="漫画1">
+    <div class="meta"><span>漫画1</span><small>2025/07</small></div>
+  </a>
+
+  <a href="manga2.html" class="thumb">
+    <img src="manga2/manga2-1.PNG" alt="漫画2">
+    <div class="meta"><span>漫画2</span><small>2025/10</small></div>
+  </a>
+
+  <a href="ppp4.html" class="thumb">
+    <img src="ppp4/ppp4-1.png" alt="ポピぱ4">
+    <div class="meta"><span>ポピぱ4</span><small>2025/08</small></div>
+  </a>
+
+  <a href="manga3.html" class="thumb">
+    <img src="manga3/manga3-1.PNG" alt="漫画3">
+    <div class="meta"><span>漫画3</span><small>2025/11</small></div>
+  </a>
+
+  <a href="manga4.html" class="thumb">
+    <img src="manga4/manga4-1.PNG" alt="漫画4">
+    <div class="meta"><span>漫画4</span><small>2025/11</small></div>
+  </a>
+</div>  <!-- ← これが抜けてた -->
+
+</section>
+
+<!-- 右 -->
+<aside class="sidebar">
+
+<div class="side-box">
+<h3>更新履歴</h3>
+<ul>
+<li>2025/08/08 サイト開設</li>
+<li>2025/11 漫画4公開</li>
+<li>2026/02 デザイン調整</li>
+</ul>
+</div>
+
+<div class="side-box">
+<h3>制作メモ</h3>
+<p>現在ゆるく漫画制作中。</p>
+</div>
+
+<div class="side-box">
+<h3>今日の一言</h3>
+<p>ラムリくんが今日もかわいい。</p>
+</div>
+
+</aside>
+
+</main>
+
+<footer>© 2025 徳時わこ — ブログを目指したなにか</footer>
+
+</div>
+</body>
+</html>
 
   <style>
     :root{
