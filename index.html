@@ -6,6 +6,11 @@
 <title>tktkwk — index</title>
 
 <style>
+
+html{
+  scroll-behavior:smooth;
+}
+
 :root{
   --bg:#e9dccb;
   --panel:#fff9f2;
@@ -124,11 +129,11 @@ nav.topnav a{
 }
 
 /* ===== 左プロフィール ===== */
-.profile{
+.profile-box{
+  background:var(--panel);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
   padding:16px;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
 }
 
 .head{
@@ -210,12 +215,12 @@ nav.topnav a{
 }
 
 .side-box{
-  padding:10px 16px 14px;   /* ← 上の余白を減らした */
+  padding:10px 16px 14px;
 }
 
 .side-box h3{
   font-size:14px;
-  margin:0 0 6px 0;         /* ← 下の余白を減らした */
+  margin:0 0 6px 0;
   background:var(--muted);
   color:#fff;
   padding:6px 12px;
@@ -230,14 +235,13 @@ nav.topnav a{
 }
 
 .side-box li{
-  margin-bottom:4px;        /* ← 行間を少し詰めた */
+  margin-bottom:4px;
 }
 
 .side-box p{
   font-size:13px;
   margin:0;
 }
-
 
 /* ===== レスポンシブ ===== */
 @media (max-width:900px){
@@ -252,7 +256,7 @@ footer{
   font-size:12px;
 }
 
-  /* ===== スマホ最適化 ===== */
+/* ===== スマホ最適化 ===== */
 @media (max-width:600px){
 
   body{
@@ -285,6 +289,51 @@ footer{
 
 }
 
+/* ===== お問い合わせ ===== */
+
+#contact h2{
+  margin-top:0;
+  font-size:18px;
+}
+
+.contact-form{
+  margin-top:15px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact-form label{
+  font-weight:700;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e3d7c7;
+  font-family:inherit;
+}
+
+.contact-form textarea{
+  resize:vertical;
+}
+
+.contact-form button{
+  margin-top:10px;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:var(--accent);
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.contact-form button:hover{
+  opacity:0.9;
+}
 
 </style>
 </head>
@@ -315,9 +364,12 @@ footer{
 <main class="main">
 
 <!-- 左 -->
-<aside class="profile" id="about">
+<aside class="sidebar" id="about">
+
+<div class="profile-box">
+
 <div class="head">
-<div class="avatar"><img src="top/wako_2.PNG" alt="アバター"></div>
+<div class="avatar"><img src="top/wako_2.png" alt="アバター"></div>
 <div>
 <div class="name">徳時わこ🪅</div>
 <div class="small-note">馬ァ！</div>
@@ -330,68 +382,7 @@ footer{
 苦手：プリン
 </p>
 
-<div class="tags">
-    <div class="tag">🧩今日の日記:ドラえもんの映画ではひみつ道具博物館が好き。あとドラえもんズ。(2025/08/08)</div>
-    <div class="tag">🧩今日の日記:好きなポケモンはオーベム。一緒に暮らしたいと思う今日この頃。(2025/09/28)</div>
-    <div class="tag">🧩今日の日記:自分の守護霊に会う夢を見た。「あんた1年後に○にたくなるみたいだけど69まで生きるよ」って言われた。早いな。(2025/10/01)</div>
-    <div class="tag">🧩今日の日記:好きなゲームはマリオとスプラトゥーン。マリオはグルメヘイホーが大好き。ハッピーハロウィン！(2025/10/31)</div>
-    <div class="tag">🧩今日の日記:作業用の再生リスト作った。楽しい。(2025/11/25)</div>
-    <div class="tag">🧩今日の日記:クレヨンしんちゃんの映画のロボとーちゃんを観てはボロ泣きしてる。メリークリスマス！(2025/12/25)</div>
-    <div class="tag">🧩今日の日記:ポピぱとえぶホスが好きな1年でした。よいお年を！(2025/12/29)</div>
-    <div class="tag">🧩今日の日記:本日2月6日は自分の誕生日です。めでたいね。今年は好きと推しの違いがわかる1年にしたい。ハッピーバースデー！(2026/02/06)</div>
-    <div class="tag">🧩今日の日記:友とディズニーに行ってきました。久しぶりのシーだったのですが色々とシステムが変わっていて戸惑いましたね。好きな乗り物はシンドバッドです。(2026/02/09)</div>
 </div>
-</aside>
-
-<!-- 中央 -->
-<section class="content" id="works">
-<div class="gallery">
-
-<a href="ppp1.html" class="thumb">
-    <img src="ppp1/ppp1-1.png" alt="ポピぱ1">
-    <div class="meta"><span>ポピぱ1</span><small>　2013/10</small></div>
-  </a>
-
-  <a href="ppp2.html" class="thumb">
-    <img src="ppp2/ppp2-1.png" alt="ポピぱ2">
-    <div class="meta"><span>ポピぱ2</span><small>　2021/09</small></div>
-  </a>
-
-  <a href="ppp3.html" class="thumb">
-    <img src="ppp3/ppp3-1.png" alt="ポピぱ3">
-    <div class="meta"><span>ポピぱ3</span><small>　2025/08</small></div>
-  </a>
-
-  <a href="manga1.html" class="thumb">
-    <img src="manga1/manga1-1.png" alt="漫画1">
-    <div class="meta"><span>漫画1</span><small>　2025/07</small></div>
-  </a>
-
-  <a href="manga2.html" class="thumb">
-    <img src="manga2/manga2-1.PNG" alt="漫画2">
-    <div class="meta"><span>漫画2</span><small>　2025/10</small></div>
-  </a>
-
-  <a href="ppp4.html" class="thumb">
-    <img src="ppp4/ppp4-1.png" alt="ポピぱ4">
-    <div class="meta"><span>ポピぱ4</span><small>　2025/08</small></div>
-  </a>
-
-  <a href="manga3.html" class="thumb">
-    <img src="manga3/manga3-1.PNG" alt="漫画3">
-    <div class="meta"><span>漫画3</span><small>　2025/11</small></div>
-  </a>
-
-  <a href="manga4.html" class="thumb">
-    <img src="manga4/manga4-1.PNG" alt="漫画4">
-    <div class="meta"><span>漫画4</span><small>　2025/11</small></div>
-  </a>
-</div>  <!-- ← これが抜けてた -->
-
-</section>
-
-<!-- 右 -->
-<aside class="sidebar">
 
 <div class="side-box">
 <h3>更新履歴</h3>
@@ -399,6 +390,7 @@ footer{
 <li>2025/08/08 サイト開設</li>
 <li>2025/11 漫画4公開</li>
 <li>2026/02 デザイン調整</li>
+<li>2026/03 デザイン調整その2</li>
 </ul>
 </div>
 
@@ -413,6 +405,80 @@ footer{
 </div>
 
 </aside>
+
+<!-- 中央 -->
+<section class="content" id="works">
+<div class="gallery">
+
+<a href="ppp1.html" class="thumb">
+<img src="ppp1/ppp1-1.png">
+<div class="meta"><span>ポピぱ1</span><small>　2013/10</small></div>
+</a>
+
+<a href="ppp2.html" class="thumb">
+<img src="ppp2/ppp2-1.png">
+<div class="meta"><span>ポピぱ2</span><small>　2021/09</small></div>
+</a>
+
+<a href="ppp3.html" class="thumb">
+<img src="ppp3/ppp3-1.png">
+<div class="meta"><span>ポピぱ3</span><small>　2025/08</small></div>
+</a>
+
+<a href="manga1.html" class="thumb">
+<img src="manga1/manga1-1.png">
+<div class="meta"><span>漫画1</span><small>　2025/07</small></div>
+</a>
+
+<a href="manga2.html" class="thumb">
+<img src="manga2/manga2-1.PNG">
+<div class="meta"><span>漫画2</span><small>　2025/10</small></div>
+</a>
+
+<a href="ppp4.html" class="thumb">
+<img src="ppp4/ppp4-1.png">
+<div class="meta"><span>ポピぱ4</span><small>　2025/08</small></div>
+</a>
+
+<a href="manga3.html" class="thumb">
+<img src="manga3/manga3-1.PNG">
+<div class="meta"><span>漫画3</span><small>　2025/11</small></div>
+</a>
+
+<a href="manga4.html" class="thumb">
+<img src="manga4/manga4-1.PNG">
+<div class="meta"><span>漫画4</span><small>　2025/11</small></div>
+</a>
+
+</div>
+</section>
+
+<section class="content" id="contact">
+
+<h2>お問い合わせ</h2>
+<p>感想やご連絡などお気軽にどうぞ。</p>
+
+<form action="https://formspree.io/f/xxxxxxx" method="POST" class="contact-form">
+
+<label>お名前</label>
+<input type="text" name="name" required>
+
+<label>メールアドレス</label>
+<input type="email" name="email" required>
+
+<label>件名</label>
+<input type="text" name="subject">
+
+<label>メッセージ</label>
+<textarea name="message" rows="6" required></textarea>
+
+<button type="submit">送信する(できない)</button>
+
+</form>
+
+</section>
+
+
 
 </main>
 
